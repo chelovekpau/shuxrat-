@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Умный помощник для рекомендаций </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./img/Remove-bg.ai_1743688892737.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Умный помощник  
+            </h1>
+            <p class="subtitle">Персонализированные рекомендации от Ochilov Shuxrat для вас</p>
+        </header>
+
+        <main>
+            <div id="welcome-screen" class="screen active">
+                <div class="welcome-content">
+                    <h2>Добро пожаловать!</h2>
+                    <p>Я помогу вам найти идеальные книги, фильмы или курсы, соответствующие вашим предпочтениям.</p>
+                    <p>Ответьте на несколько вопросов, и я подберу для вас лучшие рекомендации!</p>
+                    <button id="start-btn" class="btn">Начать</button>
+                </div>
+            </div>
+
+            <div id="category-screen" class="screen">
+                <h2>Что вас интересует?</h2>
+                <div class="options-container">
+                    <button data-category="books" class="option-btn">
+                        <i class="icon">📚</i>
+                        <span>Книги</span>
+                    </button>
+                    <button data-category="movies" class="option-btn">
+                        <i class="icon">🎬</i>
+                        <span>Фильмы</span>
+                    </button>
+                    <button data-category="courses" class="option-btn">
+                        <i class="icon">🎓</i>
+                        <span>Курсы</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="questions-screen" class="screen">
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+                <div id="question-container"></div>
+                <div class="input-container">
+                    <input type="text" id="user-answer" placeholder="Введите ваш ответ...">
+                    <button id="next-btn" class="btn">Далее</button>
+                </div>
+            </div>
+
+            <div id="results-screen" class="screen">
+                <h2>Ваши персонализированные рекомендации</h2>
+                <div id="recommendations-container"></div>
+                <button id="restart-btn" class="btn">Начать заново</button>
+            </div>
+        </main>
+
+        <footer>
+            <p> Умный помощник. Все рекомендации генерируются искусственным интеллектом.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
